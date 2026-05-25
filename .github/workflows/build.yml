@@ -14,6 +14,7 @@ jobs:
       - name: Build Package
         run: |
           export THEOS="$HOME/theos"
+          export TARGET=iphone:latest:14.0
           make package
       - name: Upload deb
         uses: actions/upload-artifact@v4
